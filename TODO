@@ -1,0 +1,32 @@
+
+Implement SDL_image for pngs
+CLI Options
+Keyboard config shit
+toggling third person
+AI Fix
+What Ryan said about it:
+"I don't have the source in front of me, but it looks like the people walk
+correctly, but keep deciding to change their destination...this is likely
+because we're reading the path model wrong or something. I don't know.
+There's path determination code that if you comment it out, everyone
+walks in a straight line, so that's the problem. Whether it's the
+determination code itself or what it bases its calculation on...I have no
+idea."
+
+What Toby did:
+Something, I dunno, here's his explanation;
+
+"Staring deep into the barely commented depths of Black Shades, I tried 
+out Ryan's idea about the pathfinding that you put in the ToDo file. 
+Having acheived the everyone walking in straight lines effect, I set 
+about a bit of hackery.
+
+In GameTick.cpp, the variable realcheck is a trigger for a lot of the 
+pathfinding stuff. It checks whether we are at the end of our path, or 
+we are moving away from our target. I have no idea why the second bit 
+isn't working properly - maybe there is some funny updating going on for 
+either oldplayercoords or playercoords. Commenting out the second check 
+gets the game working with a more believable collection of moving people."
+
+And this was the patch:
+http://cvs.icculus.org/horde/chora/diff.php/Source/GameTick.cpp?rt=blackshades&r1=1.7&r2=1.8&ty=h

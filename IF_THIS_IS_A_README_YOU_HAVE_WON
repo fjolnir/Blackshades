@@ -1,0 +1,32 @@
+Right now it's all compiling...
+http://www.icculus.org/blackshades/Textures.tar.bz2
+untar that in the Data/ dir to get the targas until somebody adds png support.
+See "Readme" for the developer's original, which of course contains notes on playing the game and such.
+Additional things we added:
+Ctrl+G to grab/ungrab the cursor
+ALT+Enter to switch to fullscreen and back again
+
+Note that you need reasonably new OpenAL libs from
+http://connect.creativelabs.com/openal/default.aspx
+Most distros which have openal at all, probably won't have the latest and greatest.
+For instance I'm told openal in debian unstable is from 2001. 
+If you don't want to update your OpenAL, you can add -DDEBIAN_NEEDS_TO_UPDATE_THEIR_OPENAL
+Complaints about the name of the #define will be nulled ;-)
+
+If you want fullscreen at startup, currently you have to -DFULLSCREEN.
+I don't suggest doing this in OS X however as it seems to have a porblem keeping the mouse properly grabbed, thus requiring some key combination.
+
+If you're on a platform where you A) Don't have Ogg Vorbis support in your OpenAL,
+ or B) Like to redownload large wav files, be my guest and -DNOOGG and get 
+http://www.icculus.org/blackshades/Data.tar.bz2 for the wavs
+
+Ported by:
+relnev
+theoddone33
+icculus
+zakk
+
+The Bug fixed by:
+Toby Haynes
+
+send diffs to zakk@timedoctor.org

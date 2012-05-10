@@ -1,0 +1,10 @@
+Program(
+	'blackshades',
+	Split('Camera.cpp Decals.cpp Fog.cpp Frustum.cpp  GameDraw.cpp GameInitDispose.cpp GameLoop.cpp GameTick.cpp ' + 
+	'Globals.cpp MacInput.cpp Main.cpp Maths.cpp Models.cpp Person.cpp Quaternions.cpp Serialize.cpp Skeleton.cpp ' +
+	'Sprites.cpp Support.cpp Text.cpp Timer.cpp Textures.cpp'),
+	CPPDEFS=['GNUSOURCE=1'],
+	CPPPATH=['.'],
+	CPPFLAGS=['-O2', '-Wall' ,'-g'],
+	LIBS=['GL', 'GLU', 'openal', 'alut', 'SDL', 'SDL_image', 'vorbisfile', 'vorbis']
+)

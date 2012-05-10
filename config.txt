@@ -1,0 +1,22 @@
+Screenwidth:
+640
+Screenheight:
+480
+Mouse sensitivity:
+0.7
+Show fps and other info:
+0
+VBL sync:
+1
+Blood:
+1
+Blur:
+0
+Main Menu:
+1
+Custom levels:
+0
+Music:
+1
+azerty keyboard:
+0

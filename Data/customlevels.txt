@@ -1,0 +1,41 @@
+Number of missions:
+2
+Level type: (assassin=0, zombie=1)
+0
+Environment: (sunny=0, foggy=1, snowy=2, rainy=3, red=4, night=5)
+3
+How many different guns can assassins have:
+2
+List them: (0=unarmed, 1=sniper rifle, 2=assaultrifle, 3=magnum, 4=handgun, 5=grenade, 6=knife, 7=shotgun
+1
+3
+One out of how many civilians is an assassin:
+4
+Starting gun: (see above)
+6
+How many magazines/grenades:
+5
+Time requirement:
+30
+Difficulty:(0 to 2, 1=normal)
+.6
+
+Level type: (assassin=0, zombie=1)
+1
+Environment: (sunny=0, foggy=1, snowy=2, rainy=3, red=4, night=5)
+4
+How many different guns can assassins have:
+2
+List them: (0=unarmed, 1=sniper rifle, 2=assaultrifle, 3=magnum, 4=handgun, 5=grenade, 6=knife, 7=shotgun
+1
+3
+One out of how many civilians is an assassin:
+4
+Starting gun: (see above)
+3
+How many magazines/grenades:
+10
+Time requirement:
+25
+Difficulty:(0 to 2, 1=normal)
+.8
