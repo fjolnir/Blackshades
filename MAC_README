@@ -1,4 +1,0 @@
-Build instructions:
-
-Use homebrew (http://mxcl.github.com/homebrew/) to install alut & sdl_image
-And then just type 'make'

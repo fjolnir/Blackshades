@@ -1,6 +1,14 @@
 Black Shades
 By David Rosen
 
+
+--
+OS X Build instructions:
+
+Use homebrew (http://mxcl.github.com/homebrew/) to install alut & sdl_image
+And then just type 'make'
+--
+
 Please do not give a vote unless you are running in OS 9, Black Shades can run under OS X but only under emulation which does not work nearly as well.
 
 Controls:
