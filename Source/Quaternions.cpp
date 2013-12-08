@@ -393,8 +393,7 @@ bool PointInTriangle(Vector *p, Vector normal, float p11, float p12, float p13, 
 bool LineFacet(Vector p1,Vector p2,Vector pa,Vector pb,Vector pc,Vector *p)
 {
    float d;
-   float a1,a2,a3;
-   float total,denom,mu;
+   float denom,mu;
    Vector n,pa1,pa2,pa3;
 
    //Calculate the parameters for the plane 
@@ -488,9 +487,8 @@ bool PointInTriangle(XYZ *p, XYZ normal, XYZ *p1, XYZ *p2, XYZ *p3)
 bool LineFacet(XYZ p1,XYZ p2,XYZ pa,XYZ pb,XYZ pc,XYZ *p)
 {
    float d;
-   float a1,a2,a3;
-   float total,denom,mu;
-   XYZ n,pa1,pa2,pa3;
+   float denom,mu;
+   XYZ n;
 
    //Calculate the parameters for the plane 
    n.x = (pb.y - pa.y)*(pc.z - pa.z) - (pb.z - pa.z)*(pc.y - pa.y);
@@ -682,13 +680,11 @@ bool sphere_line_intersection (
 	 // x1,y1,z1  P1 coordinates (point of line)
 	 // x2,y2,z2  P2 coordinates (point of line)
 	 // x3,y3,z3, r  P3 coordinates and radius (sphere)
-	 // x,y,z   intersection coordinates
 	 //
 	 // This function returns a pointer array which first index indicates
 	 // the number of intersection point, followed by coordinate pairs.
 
-	 float x , y , z;
-	 float a, b, c, mu, i ;
+	 float a, b, c, i ;
 	
 	if(x1>x3+r&&x2>x3+r)return(0);
 	if(x1<x3-r&&x2<x3-r)return(0);
@@ -706,13 +702,7 @@ bool sphere_line_intersection (
 	      2* ( x3*x1 + y3*y1 + z3*z1 ) - square(r) ;
 	 i =   b * b - 4 * a * c ;
 
-	 if ( i < 0.0 )
-	 {
-	  // no intersection
-	  return(0);
-	 }
-
-	return(1);
+	return (i >= 0.0);
 }
 
 XYZ DoRotationRadian(XYZ thePoint, float xang, float yang, float zang){
