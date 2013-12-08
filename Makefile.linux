@@ -78,7 +78,7 @@ distclean: clean
 
 clean:
 	rm -f $(CLEANUP)
-	rm -rf $(BINDIR)
+	rm -rf $(BINDIR)/*
 
 # end of Makefile.
 
