@@ -24,15 +24,11 @@ extern int psychicaimkey;
 extern int psychickey;
 
 HitStruct 	Person::BulletCollideWithPlayer(int who, XYZ start, XYZ end){
-	float damage=20;
 	XYZ tempbulletloc[2];
 	XYZ collisionpoint;
-	XYZ sparkpos;
 	GLfloat M[16];
 	int collide;
-	float howfar;
 	XYZ average;
-	XYZ facing;
 	int howmany;
 	float distancemax;
 	HitStruct hitstruct;
@@ -208,7 +204,6 @@ void 	Person::DoAnimations(int who){
 			alSourcePlay(gSourceID[whichsound]);
 		}
 		if(targetanimation==zombieeatanim&&(targetframe==3)){
-			int whichsound;
 			float gLoc[3];
 			XYZ soundpoint=(DoRotation(skeleton.joints[skeleton.jointlabels[head]].position,0,playerrotation,0)+playercoords);
 			gLoc[0]=soundpoint.x/soundscalefactor;
@@ -303,7 +298,6 @@ void 	Person::DoAnimations(int who){
 		XYZ facingdown;
 		XYZ facinghalf;
 		XYZ facingright;
-		int oldanimation=currentanimation;
 		if(who==0){
 			playerrotation2=camera.rotation2;
 			//Facing
@@ -559,8 +553,6 @@ void 	Person::DoAnimations(int who){
 }
 
 void 	Person::DoAnimationslite(int who){
-	
-	int oldanimation=currentanimation;
 	if(target>1&&!skeleton.free){
 		//Footstep sounds
 		if(who==0&&(targetanimation==joganim||targetanimation==walkanim)&&(targetframe==0||targetframe==8)&&visions==0&&(onground||abs(velocity.y)<1)){
@@ -574,7 +566,6 @@ void 	Person::DoAnimationslite(int who){
 			alSourcePlay(gSourceID[whichsound]);
 		}
 		if(targetanimation==zombieeatanim&&(targetframe==3)){
-			int whichsound;
 			float gLoc[3];
 			XYZ soundpoint=(DoRotation(skeleton.joints[skeleton.jointlabels[head]].position,0,playerrotation,0)+playercoords);
 			gLoc[0]=soundpoint.x/soundscalefactor;
@@ -777,7 +768,6 @@ void Person::FindRotationGun(XYZ start, XYZ target)
 extern Model skeletonmodels[10];
 extern Costume costume[2];
 int Person::DrawSkeleton(int who){
-	GLfloat M[16];
 	//Guns
 	if(whichgun==sniperrifle){
 		FindRotationGun(skeleton.joints[skeleton.jointlabels[righthand]].position,skeleton.joints[skeleton.jointlabels[lefthand]].position);

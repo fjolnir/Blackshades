@@ -86,20 +86,8 @@ void LoadSounds(bool musictoggle)
 	ALenum formatBuffer1;
 
 	ALsizei freqBuffer1;
-	
-	Str255 sFileName;
-
-	short fRefNum;
 
 	SInt16 iNumSources, iNumSampleSets;
-
-	// EAX test
-
-	unsigned long ulEAXVal;
-
-	long lGlobalReverb;
-
-	
 
 	// initialize OpenAL
 
@@ -1158,11 +1146,8 @@ void LoadSounds(bool musictoggle)
 
 
 
-void Game::LoadingScreen(float percent)										
-
+void Game::LoadingScreen(float percent)
 {
-
-	float size=1;
 
 	glLoadIdentity();
 

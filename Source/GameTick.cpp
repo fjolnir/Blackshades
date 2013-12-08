@@ -329,17 +329,10 @@ void 	Game::Tick(){
 
 	if(!mainmenu){
 
-		
-
-		
 
 		XYZ facing;
 
 		XYZ flatfacing;
-
-		float speed=10;
-
-		
 
 		if(person[1].health<=0||person[0].health<=0||killedinnocent){
 
@@ -530,14 +523,8 @@ void 	Game::Tick(){
 			if(visions==2)visions=0;
 
 			if(visions==0){
-
-				float rad2deg=56.54866776;
-
 				flashamount=1;
-
 				flashr=1;flashg=1;flashb=1;
-
-				
 
 				if(person[0].playercoords.x!=bodycoords.x||person[0].playercoords.z!=bodycoords.z){
 
@@ -831,19 +818,11 @@ void 	Game::Tick(){
 
 		int beginz,endz;
 
-		int distsquared;
-
 		XYZ collpoint;
 
 		XYZ move;
 
-		float howmuchintersect;
-
 		int whichtri;
-
-		float olddist;
-
-		XYZ nothing;
 
 		XYZ underpoint;
 
@@ -854,8 +833,6 @@ void 	Game::Tick(){
 		float depth;
 
 		XYZ normalrotated;
-
-		XYZ pointrotated;
 
 		bool inblock;
 
@@ -909,22 +886,6 @@ void 	Game::Tick(){
 			endz=(person[k].playercoords.z+block_spacing/2)/block_spacing+1;
 
 			if(endz>num_blocks-1)endz=num_blocks-1;
-
-			
-
-			if(k!=0){
-				/* TODO: huh? */
-				beginx==person[k].whichblockx;
-
-				beginz==person[k].whichblocky;
-
-				endx==person[k].whichblockx;
-
-				endz==person[k].whichblocky;
-
-			}
-
-			
 
 			if(beginx<=endx&&beginz<=endz)
 
@@ -3748,7 +3709,7 @@ void 	Game::Tick(){
 
 							if(person[whichhit].health>0){
 
-								if(person[whichhit].killtargetvisible==0&&person[whichhit].type!=zombietype&&person[whichhit].currentanimation!=getupfrontanim&person[whichhit].currentanimation!=getupbackanim){
+								if(person[whichhit].killtargetvisible==0 && person[whichhit].type!=zombietype && person[whichhit].currentanimation!=getupfrontanim && person[whichhit].currentanimation!=getupbackanim){
 
 									if(hitstruct.joint1->modelnum==headmodel)person[whichhit].targetanimation=headpainanim;
 
@@ -4090,7 +4051,7 @@ void 	Game::Tick(){
 
 					//Firing
 
-					XYZ end, aim, oldend;
+					XYZ end, aim;
 
 					HitStruct hitstruct,temphitstruct;
 
@@ -4334,7 +4295,7 @@ void 	Game::Tick(){
 
 		//Grenade collision
 
-		int wherex,wherey,whichsound,severwhat;
+		int wherex,wherey,whichsound;
 
 		bool impact;
 
@@ -4887,8 +4848,6 @@ void 	Game::Tick(){
 		
 
 		//3d sound
-
-		ALint tempInt;
 
 		float gLoc[3];
 
