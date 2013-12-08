@@ -969,17 +969,11 @@ int Game::DrawGLScene(void)
 
 		glEnable(GL_BLEND);
 
-		XYZ move2;
-
 		XYZ move;
 
 		int beginx,endx;
 
 		int beginz,endz;
-
-		int beginoccludex,endoccludex;
-
-		int beginoccludez,endoccludez;
 
 		int distsquared;
 
@@ -1008,8 +1002,6 @@ int Game::DrawGLScene(void)
 		
 
 		bool draw;
-
-		int numfail;
 
 		int whichtri;
 
